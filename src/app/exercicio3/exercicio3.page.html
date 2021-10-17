@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> 
+     </ion-buttons>
+    <ion-title>Você esta no exercicío 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">Informe a descrição do produto:</ion-label>
+    <ion-input type="string" [(ngModel)]="descricao"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Informe a quantidade adquirida:</ion-label>
+    <ion-input type="number" [(ngModel)]="qntd"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Informe o valor unitário:</ion-label>
+    <ion-input type="number" [(ngModel)]="valor"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="calcular()">Calcular</ion-button>
+
+
+ <ion-text color="medium">
+    <h1 *ngIf="resultado">O total é de R$ {{total}}, com desconto de {{msg}}, e valor final de R$ {{resultado}}</h1>
+  </ion-text>
+ 
+</ion-content>
+

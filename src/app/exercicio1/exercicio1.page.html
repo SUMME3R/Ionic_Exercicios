@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+     <ion-back-button></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Você esta no exercicío 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">Informe as horas trabalhadas no mês:</ion-label>
+    <ion-input type="number" [(ngModel)]="total"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Informe o salário por horas:</ion-label>
+    <ion-input type="number" [(ngModel)]="salario"></ion-input>
+  </ion-item>
+
+
+  <ion-button (click)="calcular()">Calcular</ion-button>
+
+  
+  <ion-text color="medium">
+    <h1 *ngIf="resultado">O salário final é de {{resultado}}</h1>
+  </ion-text>
+
+</ion-content>
